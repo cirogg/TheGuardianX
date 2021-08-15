@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_news"
+    app:startDestination="@id/newsListedFragment">
+
+    <fragment
+        android:id="@+id/newsListedFragment"
+        android:name="com.example.theguardianx.NewsListedFragment"
+        android:label="fragment_news_listed"
+        tools:layout="@layout/fragment_news_listed" >
+        <action
+            android:id="@+id/mainNews_to_detail"
+            app:destination="@id/newsDetailFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.theguardianx.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <action
+            android:id="@+id/action_newsDetailFragment_to_newsListedFragment"
+            app:destination="@id/newsListedFragment" />
+    </fragment>
+</navigation>
